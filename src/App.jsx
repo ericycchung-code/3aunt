@@ -104,7 +104,7 @@ const About = () => (
         initial={{ opacity: 0, scale: 0.85 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: false, amount: 0.5 }}
         >
        <img src="改2.jpg" alt="about" className="w-full h-64 object-cover" />
        </motion.div>  
