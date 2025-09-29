@@ -34,7 +34,7 @@ const Nav = () => (
         transition={{duration:1,delay:0.2}}
         src={"店徽.jpg"} 
         alt="我的店徽" 
-        className="max-h-12 w-auto"   /></div>
+        className="max-h-[60px] w-auto"   /></div>
         <div className="text-xl md:text-4xl font-semibold text-emerald-700">三姑姑健康屋</div>
         <div className="text-sm md:text-xl text-emerald-700">3 Aunt Health House</div>
        </div>   
