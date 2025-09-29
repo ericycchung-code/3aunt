@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Clock, Instagram, Facebook, Phone, Mail, ShoppingCart } from 'lucide-react';
+import { MapPin, Clock,  Phone, Mail, ShoppingCart } from 'lucide-react';
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 // --- 輔助元件 ---
@@ -28,19 +28,18 @@ const Button = ({ variant = 'primary', className = '', children, ...rest }) => {
 const Nav = () => (
    <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
     <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
-       <div className="flex items-center gap-4">
+       <div className="flex items-center gap-3">
         <div className="text-4xl font-semibold text-emerald-700"><img 
-        // 使用 process.env.PUBLIC_URL 確保在非根目錄部署時也能正確找到
         src={"店徽.jpg"} 
         alt="我的店徽" 
-        style={{ height: '50px' }}   /></div>
-        <div className="text-4xl font-semibold text-emerald-700">三姑姑健康屋</div>
-        <div className="text-xl text-emerald-700">3 Aunt Health House</div>
-       </div>
-       <nav className="flex items-center gap-4 text-sm">
-         <a href="#about" className="bg-[#81D8D0] text-white px-3 py-1 rounded hover:bg-[#6cbfb8]">關於</a>
-         <a href="#menu" className="bg-[#81D8D0] text-white px-3 py-1 rounded hover:bg-[#6cbfb8]">菜單</a>
-         <a href="#visit" className="bg-[#81D8D0] text-white px-3 py-1 rounded hover:bg-[#6cbfb8]">到店</a>
+        className="max-h-12 w-auto"   /></div>
+        <div className="text-xl md:text-4xl font-semibold text-emerald-700">三姑姑健康屋</div>
+        <div className="text-sm md:text-xl text-emerald-700">3 Aunt Health House</div>
+       </div>   
+       <nav className="flex items-center gap-3 text-sm">
+         <a href="#about" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">關於</a>
+         <a href="#menu" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">菜單</a>
+         <a href="#visit" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">到店</a>
        </nav>
     </div>
    </header>
@@ -67,18 +66,18 @@ const listContainer = {
 
 const Hero = () => (
   <Section className="relative">
-    <div className="h-[56vh] md:h-67vh] relative overflow-hidden">
+    <div className="h-[50vh] min-h-[400px] md:h-[67vh]  relative overflow-hidden">
       <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-cover" initial={{ scale: 1.2 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-100/10 to-green-200/50" />
-      <div className="absolute top-20  right-5 ">
-        <div className=" flex items-center mx-auto max-w-6xl px-6 md:px-10 lg:px-16 pb-16">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full">
           <motion.div 
-            className="bg-white/90 rounded-3xl p-6 md:p-10 max-w-2xl shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
+            className="bg-white/90 rounded-3xl p-6 md:p-10 max-w-xl md:max-w-2xl shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
             initial="hidden" 
             animate="show" 
             variants={heroCardVariants}
             transition={{ duration: 0.8, delay: 1.5 }} >
-            <h1 className="text-3xl md:text-4xl font-serif text-emerald-700">三姑姑健康屋</h1>
+            <h1 className="text-3xl md:text-5xl font-serif text-emerald-700">三姑姑健康屋</h1>
             <div className="text-emerald-700 font-medium mt-1">3 Aunt Health House</div>
             <p className="mt-3 text-ml text-zinc-700">使用當日現買新鮮食材，手作溫暖便當 · 健康、少油、風味有層次。</p>
             <div className="mt-4 flex gap-3">
