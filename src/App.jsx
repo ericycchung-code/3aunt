@@ -29,7 +29,9 @@ const Nav = () => (
    <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
     <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
        <div className="flex items-center gap-3">
-        <div className="text-4xl font-semibold text-emerald-700"><img 
+        <div className="text-4xl font-semibold text-emerald-700"><motion.img initial={{opacity:0,x:-150,rotate:-360}}
+        animate={{opacity:1,x:0,rotate:0}}
+        transition={{duration:1,delay:0.2}}
         src={"店徽.jpg"} 
         alt="我的店徽" 
         className="max-h-12 w-auto"   /></div>
