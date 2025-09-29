@@ -59,7 +59,7 @@ const cardVariants = {
 
 const listContainer = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 ,delay: 1.3 } }
+  show: { transition: { staggerChildren: 0.08 ,delay: 1.3  ,duration: 0.8, ease: "easeOut" }}
 };
 
 // --- 元件 ---
@@ -99,9 +99,15 @@ const About = () => (
         <h2 className="text-2xl md:text-3xl font-semibold mt-3">匠心製作 · 健康少油</h2>
         <p className="mt-4 text-zinc-700">我們堅持每日親採台灣在地當季蔬果與優良蛋白，將食材的鮮甜，透過減油少鹽的巧手轉化。每一次的烹調，都是對細節的專注與對健康的平衡。在您的每一個忙碌時刻，三姑姑用這份充滿心意的便當，為您的身心注入飽滿的能量。</p>
       </div>
-      <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }}> 
-        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1600&auto=format&fit=crop" alt="about" className="w-full h-64 object-cover" />
-      </motion.div>
+       <motion.div
+        className="rounded-2xl overflow-hidden shadow-md"
+        initial={{ opacity: 0, scale: 0.85 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }}
+        >
+       <img src="改.png" alt="about" className="w-full h-64 object-cover" />
+       </motion.div>  
     </div>
   </Section>
 );
@@ -125,9 +131,9 @@ const Menu = () => {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電/線上查詢當日供應。</p>
-        <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: false }}>
+        <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: false }} >
           {items.map(it => (
-            <motion.article key={it.id} className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer" variants={cardVariants} whileHover={{ scale: 1.02 }}>
+            <motion.article key={it.id} className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer" variants={cardVariants} whileHover={{ scale: 1.05 }}>
               <div className="h-60 overflow-hidden">
                 <motion.img src={it.img} alt={it.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
