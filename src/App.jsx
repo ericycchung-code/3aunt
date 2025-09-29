@@ -167,7 +167,7 @@ const Seasonal = () => (
           包含清脆爽口的青花椰、清甜的節瓜、滑嫩的南瓜與鮮甜番茄，均衡營養、色彩繽紛，為整體料理增添清爽風味。
          </p>
           <h4 className="text-xl font-semiboldbold ">
-          # 提前預訂，單次訂購數量需滿100盒。
+          ※ 提前預訂，單次訂購數量需滿100盒。
         </h4>
         </div>
         </motion.div>
