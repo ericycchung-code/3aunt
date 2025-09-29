@@ -152,7 +152,7 @@ const Seasonal = () => (
     <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
       <h3 className="text-2xl font-semibold">本週主打</h3>
       <div className="mt-4 grid md:grid-cols-2 gap-6 items-center">
-        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false}}>
+        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.1  }}} viewport={{ once: false}}>
           <div>
          <h4 className="text-2xl font-medium mb-10">精緻會議便當</h4>
          <p className="mt-2 text-zinc-700 mb-10">
@@ -163,7 +163,7 @@ const Seasonal = () => (
 </h4>
 </div>
         </motion.div>
-        <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}>
+        <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.6  }}} viewport={{ once: false }}>
           <img src="/p2.jpg" alt="seasonal" className="w-full h-66 object-cover" />
         </motion.div>
       </div>
@@ -207,8 +207,8 @@ export const Visit = () => (
       {/* 左側文字區 */}
       <motion.div 
         className="space-y-4 bg-white/80 rounded-3xl p-6 md:p-10 max-w-2xl shadow-xl mx-auto backdrop-blur-sm "  
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0,transition: {  type:"spring",stiffness:150, duration: 1.5,   delay: 0.3  }}}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0,transition: {  type:"spring",stiffness:120, duration: 1.8,   delay: 0.3  }}}
         viewport={{ once: false, amount: 0.3 }}
       >
         <Pill>到店自取</Pill>
@@ -261,7 +261,7 @@ export const Footer = () => (
      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="space-y-2"
      >
         <div className="text-xl font-semibold text-emerald-700">三姑姑健康屋</div>
@@ -275,7 +275,7 @@ export const Footer = () => (
       <motion.div
        initial={{ opacity: 0, y: 20 }}
        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
-       viewport={{ once: true }}
+       viewport={{ once: false }}
        className="text-sm text-zinc-600"
        >
        <div className="font-medium text-zinc-800 mb-2">聯絡我們</div>
@@ -293,7 +293,7 @@ export const Footer = () => (
       <motion.div
        initial={{ opacity: 0, y: 20 }}
        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-       viewport={{ once: true }}
+       viewport={{ once: false }}
        className="flex flex-col items-start gap-2"
       >
        <div className="font-medium text-zinc-800 mb-2">追蹤我們</div>
