@@ -106,7 +106,7 @@ const About = () => (
         transition={{ duration: 1.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.5 }}
         >
-       <img src="改.png" alt="about" className="w-full h-64 object-cover" />
+       <img src="改2.jpg" alt="about" className="w-full h-64 object-cover" />
        </motion.div>  
     </div>
   </Section>
@@ -130,7 +130,7 @@ const Menu = () => {
     <Section id="menu" className="py-12 md:py-16 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
-        <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電/線上查詢當日供應。</p>
+        <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
         <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: false }} >
           {items.map(it => (
             <motion.article key={it.id} className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer" variants={cardVariants} whileHover={{ scale: 1.05 }}>
@@ -154,27 +154,29 @@ const Menu = () => {
 };
 
 const Seasonal = () => (
-  <Section className="py-12 md:py-16 bg-amber-50">
-    <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-      <h3 className="text-2xl font-semibold">本週主打</h3>
-      <div className="mt-4 grid md:grid-cols-2 gap-6 items-center">
-        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.1  }}} viewport={{ once: false}}>
-          <div>
-         <h4 className="text-2xl font-medium mb-10">精緻會議便當</h4>
+  <Section className="py-12 md:py-16 bg-amber-50">
+    <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+       <h3 className="text-2xl font-semibold">本週主打</h3>
+      <div className="mt-4 grid md:grid-cols-2 gap-6 items-center">
+         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.1  }}} viewport={{ once: false}}>
+        <div>
+         <h4 className="text-2xl font-medium mb-10">精緻會議便當--依客製</h4>
          <p className="mt-2 text-zinc-700 mb-10">
-          嚴選健康豬里肌，以大火快炒爆香在地青蔥，鎖住肉汁與香氣。芹菜炒鮮撥大蝦仁，鹹香夠味、口感彈嫩，是道地又下飯的經典台式美味。搭配時令蔬菜。
+          嚴選健康豬里肌，以大火快炒爆香在地青蔥，鎖住肉汁與香氣。芹菜炒鮮撥大蝦仁，鹹香夠味、口感彈嫩，是道地又下飯的經典台式美味。
+          經典宮保雞丁以花椒、乾辣椒、洋蔥同炒，香辣帶勁，酸甜鹹香交織，讓人一口接一口停不下來。搭配當季時令蔬菜，
+          包含清脆爽口的青花椰、清甜的節瓜、滑嫩的南瓜與鮮甜番茄，均衡營養、色彩繽紛，為整體料理增添清爽風味。
          </p>
           <h4 className="text-xl font-semiboldbold ">
-         # 提前預訂，單次訂購數量需滿100盒。
-</h4>
-</div>
-        </motion.div>
-        <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.6  }}} viewport={{ once: false }}>
-          <img src="/p2.jpg" alt="seasonal" className="w-full h-66 object-cover" />
-        </motion.div>
-      </div>
-    </div>
-  </Section>
+          # 提前預訂，單次訂購數量需滿100盒。
+        </h4>
+        </div>
+        </motion.div>
+        <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.6  }}} viewport={{ once: false }}>
+         <img src="/p2.jpg" alt="seasonal" className="w-full h-66 object-cover" />
+         </motion.div>
+      </div>
+    </div>
+    </Section>
 );
 
 
