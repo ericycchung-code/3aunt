@@ -66,18 +66,18 @@ const listContainer = {
 
 const Hero = () => (
   <Section className="relative">
-    <div className="h-[50vh] min-h-[400px] md:h-[67vh]  relative overflow-hidden">
+    <div className="h-[40vh] min-h-[300px] md:h-[50vh] relative overflow-hidden">
       <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-cover" initial={{ scale: 1.2 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-100/10 to-green-200/50" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full">
+        <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full pt-1/3 md:pt-1/4">
           <motion.div 
-            className="bg-white/90 rounded-3xl p-6 md:p-10 max-w-xl md:max-w-2xl shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
+            className="bg-white/90 rounded-3xl p-6 md:p-8 max-w-md md:max-w-lg shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
             initial="hidden" 
             animate="show" 
             variants={heroCardVariants}
             transition={{ duration: 0.8, delay: 1.5 }} >
-            <h1 className="text-3xl md:text-5xl font-serif text-emerald-700">三姑姑健康屋</h1>
+            <h1 className="text-2xl md:text-4xl font-serif text-emerald-700">三姑姑健康屋</h1>
             <div className="text-emerald-700 font-medium mt-1">3 Aunt Health House</div>
             <p className="mt-3 text-ml text-zinc-700">使用當日現買新鮮食材，手作溫暖便當 · 健康、少油、風味有層次。</p>
             <div className="mt-4 flex gap-3">
@@ -92,7 +92,7 @@ const Hero = () => (
 );
 
 const About = () => (
-  <Section id="about" className="py-12 md:py-16 bg-stone-50"> 
+  <Section id="about" className="py-12 md:py-16 bg-stone-50 scroll-mt-20"> 
     <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
       <div>
         <Pill>用心手作</Pill>
@@ -121,7 +121,7 @@ const Menu = () => {
   ];
 
   return (
-    <Section id="menu" className="py-12 md:py-16">
+    <Section id="menu" className="py-12 md:py-16 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電/線上查詢當日供應。</p>
@@ -159,7 +159,7 @@ const Seasonal = () => (
           嚴選健康豬里肌，以大火快炒爆香在地青蔥，鎖住肉汁與香氣。芹菜炒鮮撥大蝦仁，鹹香夠味、口感彈嫩，是道地又下飯的經典台式美味。搭配時令蔬菜。
          </p>
           <h4 className="text-xl font-semiboldbold ">
-         # 提前預訂，單次訂購數量需滿足100盒
+         # 提前預訂，單次訂購數量需滿100盒。
 </h4>
 </div>
         </motion.div>
@@ -199,7 +199,7 @@ const LocationInfo = () => (
 export const Visit = () => (
   <Section 
     id="visit" 
-    className="py-16 md:py-24 bg-white/80" // 將原本的 bg-[#fefdfc] 換成 bg-white 或移除，以便背景圖片顯示
+    className="py-16 md:py-24 bg-white/80 scroll-mt-20" // 將原本的 bg-[#fefdfc] 換成 bg-white 或移除，以便背景圖片顯示
   >
   
     <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
@@ -239,7 +239,7 @@ export const Visit = () => (
 export const Visit1 = () => (
   <Section 
     id="visit1" 
-    className="py-16 md:py-44 bg-white" // 將原本的 bg-[#fefdfc] 換成 bg-white 或移除，以便背景圖片顯示
+    className="py-16 md:py-44 bg-white scroll-mt-20" // 將原本的 bg-[#fefdfc] 換成 bg-white 或移除，以便背景圖片顯示
     style={{ 
       backgroundImage: `url('比賽.jpg')`, 
     backgroundSize: 'auto', // 原始大小
