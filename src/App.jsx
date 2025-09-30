@@ -27,16 +27,16 @@ const Button = ({ variant = 'primary', className = '', children, ...rest }) => {
 
 const Nav = () => (
    <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
-    <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
        <div className="flex items-center gap-3">
         <div className="text-4xl font-semibold text-emerald-700" ><motion.img initial={{opacity:0,x:-150,rotate:-360}}
         animate={{opacity:1,x:0,rotate:0}}
         transition={{duration:1,delay:0.2}}
         src={"店徽2.jpg"} 
         alt="我的店徽" 
-        className="max-h-[60px] w-auto  rounded-full object-cover"   /></div>
-        <div className="text-xl md:text-4xl font-semibold text-emerald-700">三姑姑健康屋</div>
-        <div className="text-sm md:text-xl text-emerald-700">3 Aunt Health House</div>
+        className="h-12 md:h-15 lg:h-18 w-auto rounded-full object-cover"   /></div>
+        <div className="text-xl md:text-3xl  lg:text-5xl font-semibold text-emerald-700">三姑姑健康屋</div>
+        <div className="text-sm md:text-xl  lg:text-3xl text-emerald-700">3 Aunt Health House</div>
        </div>   
        <nav className="flex items-center gap-3 text-sm">
          <a href="#about" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">關於</a>
