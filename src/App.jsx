@@ -145,7 +145,7 @@ const About = () => (
       <div>
         <Pill>用心手作</Pill>
         <h2 className="text-2xl md:text-3xl font-semibold mt-3">匠心製作 · 健康少油</h2>
-        <p className="mt-4 text-zinc-700">我們堅持每日親採台灣在地當季蔬果與優良蛋白，將食材的鮮甜，透過減油少鹽的巧手轉化。每一次的烹調，都是對細節的專注與對健康的平衡。在您的每一個忙碌時刻，三姑姑用這份充滿心意的便當，為您的身心注入飽滿的能量。</p>
+        <p className="mt-4 text-zinc-700">我們堅持每日親採台灣在地當季蔬果與優良蛋白，將食材的鮮甜，透過減油少鹽的巧手轉化。每一次的烹調，都是對細節的專注與對健康的平衡。在您的每一個忙碌時刻，三姑姑用這份充滿心意的便當，為您的身心增添飽滿的能量。</p>
       </div>
        <motion.div
         className="rounded-2xl overflow-hidden shadow-md"
