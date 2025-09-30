@@ -140,7 +140,7 @@ const Hero = () => (
 );
 
 const About = () => (
-  <Section id="about" className="py-12 md:py-16 bg-stone-50 scroll-mt-20"> 
+  <Section id="about" className="py-12 md:py-16 bg-stone-50 scroll-mt-32"> 
     <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
       <div>
         <Pill>用心手作</Pill>
@@ -177,7 +177,7 @@ const Menu = () => {
 
 
   return (
-    <Section id="menu" className="py-12 md:py-16 scroll-mt-20">
+    <Section id="menu" className="py-12 md:py-16 scroll-mt-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
@@ -276,7 +276,7 @@ const LocationInfo = () => (
 export const Visit = () => (
   <Section 
     id="visit" 
-    className="py-16 md:py-24 bg-white/80 scroll-mt-20"
+    className="py-16 md:py-24 bg-white/80 scroll-mt-32"
   >
   
     <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
@@ -316,7 +316,7 @@ export const Visit = () => (
 export const Visit1 = () => (
   <Section 
     id="visit1" 
-    className="py-16 md:py-44 bg-white scroll-mt-20"
+    className="py-16 md:py-44 bg-white scroll-mt-32"
     style={{ 
       backgroundImage: `url('比賽.jpg')`, 
     backgroundSize: 'auto',
