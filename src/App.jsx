@@ -115,7 +115,7 @@ const ImageCarousel = ({ images, altText, interval = 3000 }) => {
 const Hero = () => (
   <Section className="relative">
     <div className="h-[40vh] min-h-[300px] md:h-[50vh] relative overflow-hidden">
-      <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-cover" initial={{ scale: 1.2 }} animate={{ scale: 1 }} transition={{ duration: 0.8 }} />
+      <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-cover" initial={{ scale: 1.2 }} animate={{ scale: 0.8 }} transition={{ duration: 0.8 }} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-100/10 to-green-200/50" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full pt-1/3 md:pt-1/4">
@@ -125,9 +125,9 @@ const Hero = () => (
             animate="show" 
             variants={heroCardVariants}
             transition={{ duration: 0.8, delay: 1.5 }} >
-            <h1 className="text-2xl md:text-4xl font-serif text-emerald-700">三姑姑健康屋</h1>
-            <div className="text-emerald-700 font-medium mt-1">3 Aunt Health House</div>
-            <p className="mt-3 text-ml text-zinc-700">使用當日現買新鮮食材，手作溫暖便當 · 健康、少油、風味有層次。</p>
+            <h1 className="text-2xl md:text-4xl font-serif text-emerald-700 pl-2"> 三姑姑健康屋</h1>
+            <div className="text-emerald-700 font-medium mt-1 pl-3 "> 3 Aunt Health House</div>
+            <p className="mt-3 text-ml text-zinc-700 pl-3"> 使用當日現買新鮮食材，手作溫暖便當 · 健康、少油、風味有層次。</p>
             <div className="mt-4 flex gap-3">
               <a href="#menu" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#81D8D0] text-white hover:bg-[#6cbfb8] transition-colors">查看菜單</a>
               <a href="#visit" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#81D8D0] text-white hover:bg-[#6cbfb8] transition-colors">到店資訊</a>
@@ -220,11 +220,11 @@ const Menu = () => {
 };
 
 const Seasonal = () => (
-  <Section className="py-12 md:py-16 bg-amber-50">
+  <Section className="py-12 md:py-16 bg-amber-50 overflow-hidden">
     <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
        <h3 className="text-2xl font-semibold">本週主打</h3>
       <div className="mt-4 grid md:grid-cols-2 gap-6 items-center">
-         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.1  }}} viewport={{ once: false}}>
+         <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.2  }}} viewport={{ once: false}}>
         <div>
          <h4 className="text-2xl font-medium mb-10">精緻會議便當--客製化</h4>
          <p className="mt-2 text-zinc-700 mb-10">
@@ -237,7 +237,7 @@ const Seasonal = () => (
         </h4>
         </div>
         </motion.div>
-        <motion.div className="rounded-2xl overflow-hidden shadow-md" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.6  }}} viewport={{ once: false }}>
+        <motion.div className="rounded-2xl overflow-hidden shadow-md " initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.2  }}} viewport={{ once: false }}>
          <img src="/p2.jpg" alt="seasonal" className="w-full h-66 object-cover" />
          </motion.div>
       </div>
