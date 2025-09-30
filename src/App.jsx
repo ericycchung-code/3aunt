@@ -120,7 +120,7 @@ const Hero = () => (
       <div className="absolute inset-0 flex items-center justify-center">
         <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full pt-1/3 md:pt-1/4">
           <motion.div 
-            className="bg-white/90 rounded-3xl p-6 md:p-8 max-w-md md:max-w-lg shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
+            className="bg-white/90 rounded-3xl p-6 md:p-8 max-w-md md:max-w-xl shadow-xl mx-auto backdrop-blur-sm border border-emerald-100"
             initial="hidden" 
             animate="show" 
             variants={heroCardVariants}
@@ -226,14 +226,14 @@ const Seasonal = () => (
       <div className="mt-4 grid md:grid-cols-2 gap-6 items-center">
          <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0,transition: {  duration: 1.2,   delay: 0.1  }}} viewport={{ once: false}}>
         <div>
-         <h4 className="text-2xl font-medium mb-10">精緻會議便當--依客製</h4>
+         <h4 className="text-2xl font-medium mb-10">精緻會議便當--客製化</h4>
          <p className="mt-2 text-zinc-700 mb-10">
           嚴選健康豬里肌，以大火快炒爆香在地青蔥，鎖住肉汁與香氣。芹菜炒鮮撥大蝦仁，鹹香夠味、口感彈嫩，是道地又下飯的經典台式美味。
           經典宮保雞丁以花椒、乾辣椒、洋蔥同炒，香辣帶勁，酸甜鹹香交織，讓人一口接一口停不下來。搭配當季時令蔬菜，
           包含清脆爽口的青花椰、清甜的節瓜、滑嫩的南瓜與鮮甜番茄，均衡營養、色彩繽紛，為整體料理增添清爽風味。
          </p>
           <h4 className="text-xl font-semiboldbold ">
-          ※ 提前預訂，單次訂購數量需滿100盒。
+          ※ 提前預訂，單次訂購數量需滿50盒。
         </h4>
         </div>
         </motion.div>
@@ -256,7 +256,7 @@ const LocationInfo = () => (
     <Phone className="h-4 w-4"/> <a href="tel:053625510" className="hover:text-zinc-800 transition-colors">05-3625510</a>
     </span>
     <span className="inline-flex items-center gap-2">
-      <Clock className="h-4 w-4"/> 週一–週五 11:00–13:00、16:30–18:30 賣完為止，遇假日公休。
+      <Clock className="h-4 w-4"/> 週一–週五 10:00–13:00、16:30–18:30 賣完為止，遇假日公休。
     </span>
     <div className="flex gap-4 pt-2">
       <a href="https://www.facebook.com/3aunt.health" target="_blank" rel="noopener noreferrer">
