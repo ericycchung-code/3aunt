@@ -115,7 +115,7 @@ const ImageCarousel = ({ images, altText, interval = 3000 }) => {
 const Hero = () => (
   <Section className="relative">
     <div className="h-[40vh] min-h-[300px] md:h-[50vh] relative overflow-hidden">
-      <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-cover" initial={{ scale: 1.2 }} animate={{ scale: 0.8 }} transition={{ duration: 0.8 }} />
+      <motion.img src="/hero-bento.jpg" alt="Bento hero" className="w-full h-full object-contain" initial={{ scale: 1.2 }} animate={{ scale: 0.9 }} transition={{ duration: 0.8 }} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-100/10 to-green-200/50" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className=" mx-auto max-w-6xl px-6 md:px-10 lg:px-16 w-full pt-1/3 md:pt-1/4">
