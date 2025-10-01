@@ -154,7 +154,7 @@ const About = () => (
         transition={{ duration: 1.6, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
         >
-       <img src="改2.jpg" alt="about" className="w-full h-auto object-contain" />
+       <img src="改3.jpg" alt="about" className="w-full h-auto object-contain " />
        </motion.div>  
     </div>
   </Section>
