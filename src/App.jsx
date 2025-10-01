@@ -163,16 +163,16 @@ const About = () => (
 // --- 菜單元件 (Menu) ---
 const Menu = () => {
   const items = [
-    { id: 'm1', name: '醬燒梅花豬便當', desc: '溫潤香氣，微辛回甘', price: '95up', img: "/p1.jpg" },
-    { id: 'm2', name: '一般豬排便當', desc: '金黃誘人，油潤迷人', price: '90up', img: '/p2.jpg' },
+    { id: 'm1', name: '醬燒梅花豬便當', desc: '溫潤香氣，微辛回甘', price: '95up', img: "/p1-1.jpg" },
+    { id: 'm2', name: '一般豬排便當', desc: '金黃誘人，油潤迷人', price: '90up', img: '/p2-1.jpg' },
     { id: 'm3', name: '紅麴豬排便當', desc: '微甜麴香，色澤誘人', price: '100up', img: '/p2.jpg' },
     { id: 'm4', name: '塔香三杯雞便當', desc: '濃郁層次，滑嫩多汁', price: '100up', img: '/p4.jpg' },
-    { id: 'm5', name: '檸香烤雞腿便當', desc: '檸香清爽，肉質鮮嫩', price: '100up', img: '/p5.jpg' },
-    { id: 'm6', name: '香煎虱目魚便當', desc: '海風氣息，酥香撲鼻', price: '150up', img: '/p2.jpg' },
-    { id: 'm7', name: '私房特餐', desc: '隱藏美味，每日新鮮', price: '100up', img: ['/p2.jpg', '/p4.jpg', '/p2.jpg', '/p4.jpg'] },
-    { id: 'm8', name: '經濟特餐', desc: '香辣迷人，樸實飽滿', price: '60up', img: '/p2.jpg' },
+    { id: 'm5', name: '檸香烤雞腿便當', desc: '檸香清爽，肉質鮮嫩', price: '100up', img: '/p5-1.jpg' },
+    { id: 'm6', name: '香煎虱目魚便當', desc: '海風氣息，酥香撲鼻', price: '150up', img: '/p6.jpg' },
+    { id: 'm7', name: '私房特餐', desc: '隱藏美味，每日新鮮', price: '100up', img: ['/p7.jpg', '/p4.jpg', '/p2.jpg'] },
+    { id: 'm8', name: '經濟特餐', desc: '香辣迷人，樸實飽滿', price: '60up', img: '/p8.jpg' },
     { id: 'm9', name: '素食便當', desc: '清新香氣，層次分明', price: '90up', img: '/p9.jpg' },
-    { id: 'm10', name: '菜盒', desc: '色香俱佳，清爽怡人', price: '100up', img: '/p2.jpg' },
+    { id: 'm10', name: '菜盒', desc: '色香俱佳，清爽怡人', price: '100up', img: '/p10.jpg' },
   ];
 
 
@@ -238,7 +238,7 @@ const Seasonal = () => (
         </div>
         </motion.div>
         <motion.div className="rounded-2xl overflow-hidden shadow-md " initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.2  }}} viewport={{ once: false }}>
-         <img src="/p2.jpg" alt="seasonal" className="w-full h-66 object-cover" />
+         <img src="/ppp.jpg" alt="seasonal" className="w-full h-66 object-cover" />
          </motion.div>
       </div>
     </div>
@@ -355,7 +355,7 @@ export const Footer = () => (
        <div className="font-medium text-zinc-800 mb-2">聯絡我們</div>
       <div className="space-y-1">
       <div className="inline-flex items-center gap-2"><Phone className="h-4 w-4"/> <a href="tel:053625510" className="hover:text-zinc-800 transition-colors">05-3625510</a></div>
-       <div className="inline-flex items-center gap-2"><Mail className="h-4 w-4"/> <a href="mailto:ericycchung@gmail.com" className="hover:text-zinc-800 transition-colors">ericycchung@gmail.com</a></div>
+       <div className="inline-flex items-center gap-2"><Mail className="h-4 w-4"/> <a href="mailto:ericycchung@gmail.com" className="hover:text-zinc-800 transition-colors">3aunt.health@gmail.com</a></div>
        <div className="inline-flex items-center gap-2"><MapPin className="h-4 w-4"/> 嘉義縣太保市祥和一路東段70號</div>
       <div className="text-sm text-zinc-500 pt-2">
       ※ 營業時間請參考「到店自取」區塊說明
