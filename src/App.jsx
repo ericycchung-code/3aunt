@@ -29,7 +29,9 @@ const Nav = () => (
    <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
     <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
        <div className="flex items-center gap-3">
-        <div className="text-4xl font-semibold text-emerald-700" ><motion.img initial={{opacity:0,x:-150,rotate:-360}}
+        <div className="text-4xl font-semibold text-emerald-700" >
+        <motion.img 
+        initial={{opacity:0,x:-150,rotate:-360}}
         animate={{opacity:1,x:0,rotate:0}}
         transition={{duration:1,delay:0.2}}
         src={"店徽2.jpg"} 
@@ -68,22 +70,19 @@ const listContainer = {
 const ImageCarousel = ({ images, altText, interval = 3000 }) => {
   // 圖片索引，從 0 開始
   const [index, setIndex] = React.useState(0);
-
   React.useEffect(() => {
     // 設置定時器來切換圖片索引
     const timer = setInterval(() => {
       // 索引遞增，使用模數運算 (Modulo) 確保索引不會超出圖片陣列的範圍
       setIndex(prevIndex => (prevIndex + 1) % images.length);
     }, interval); // 預設 3000 毫秒 = 3 秒切換一次
-
     // 清理定時器
     return () => clearInterval(timer);
   }, [images.length, interval]);
-
   // Framer Motion 圖片切換動畫的變體
   const imageVariants = {
     enter: { opacity: 0 },
-    center: { opacity: 1, transition: { duration: 0.8 } }, // 淡入淡出時間 0.8 秒
+    center: { opacity: 1, transition: { duration: 0.7 } }, // 淡入淡出時間 0.8 秒
     exit: { opacity: 0 }
   };
 
@@ -181,16 +180,19 @@ const Menu = () => {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
-        <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: false }} >
+        <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: true }} >
           {items.map(it => (
             <motion.article 
-              key={it.id} 
-              className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer" 
-              variants={cardVariants} 
-              // *** 恢復卡片縮放，並設定過渡時間使其平滑 ***
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
+             key={it.id} 
+             // 基礎陰影和樣式保留
+            className="bg-white rounded-2xl overflow-hidden shadow transition cursor-pointer" 
+            variants={cardVariants} 
+            // 螢幕大時：滑鼠懸停放大
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} // shadow-lg 效果
+            // 螢幕小時/觸控裝置：點擊時略微縮小，模擬「按下」的感覺
+             whileTap={{ scale: 0.98, boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)" }} // 輕微 shadow 效果
+            transition={{ duration: 0.2 }}
+            >
               <div className="h-60 overflow-hidden">
                 {/* *** 關鍵修正：新增靜態 div 隔離層 *** */}
                 <div className="w-full h-full"> 
