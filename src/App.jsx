@@ -165,7 +165,7 @@ const Menu = () => {
   const items = [
     { id: 'm1', name: '薑燒梅花豬便當', desc: '溫潤香氣，微辛回甘', price: '95up', img: "/p1-1.jpg" },
     { id: 'm2', name: '一般豬排便當', desc: '金黃誘人，油潤迷人', price: '90up', img: '/p2-1.jpg' },
-    { id: 'm3', name: '紅麴豬排便當', desc: '微甜麴香，色澤誘人', price: '100up', img: '/店徽.jpg' },
+    { id: 'm3', name: '紅麴豬排便當', desc: '微甜麴香，色澤誘人', price: '100up', img: '/p3.jpg' },
     { id: 'm4', name: '塔香三杯雞便當', desc: '濃郁層次，滑嫩多汁', price: '100up', img: '/p4.jpg' },
     { id: 'm5', name: '檸香烤雞腿便當', desc: '檸香清爽，肉質鮮嫩', price: '100up', img: '/p5-1.jpg' },
     { id: 'm6', name: '香煎虱目魚便當', desc: '海風氣息，酥香撲鼻', price: '150up', img: '/p6.jpg' },
