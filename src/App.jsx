@@ -190,11 +190,11 @@ const Menu = () => {
             // 螢幕大時：滑鼠懸停放大
             whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} // shadow-lg 效果
             // 螢幕小時/觸控裝置：點擊時略微縮小，模擬「按下」的感覺
-             whileTap={{ scale: 0.98, boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)" }} // 輕微 shadow 效果
+             whileTap={{ scale: 0.98, boxShadow: "0 15px 25px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0px rgba(0, 0, 0, 0.15)0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)" }} // 輕微 shadow 效果
             transition={{ duration: 0.2 }}
             >
               <div className="h-60 overflow-hidden">
-                {/* *** 關鍵修正：新增靜態 div 隔離層 *** */}
+             {/* *** 關鍵修正：新增靜態 div 隔離層 *** */}
                 <div className="w-full h-full"> 
                   {Array.isArray(it.img) ? (
                     // 輪播元件： ImageCarousel 負責自己的動畫
