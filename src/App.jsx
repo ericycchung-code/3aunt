@@ -178,12 +178,15 @@ const Menu = () => {
   return (
     <Section id="menu" className="py-12 md:py-16 scroll-mt-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-        <h3 className="text-2xl font-semibold">當日精選菜單</h3>
-        <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
-        <h4 className="mt-3 text-base font-bold text-orange-500 whitespace-nowrap">
-    人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
-</h4>
-
+      <h3 className="text-2xl font-semibold">當日精選菜單</h3>
+      <p class="mt-2 text-sm text-zinc-600">
+        主食：<span class="font-semibold">白飯 / 糙米飯（可選）</span>
+        <br/>
+       菜色每日可能略有調整，詳情歡迎來電洽詢。
+      </p>
+      <h4 className="mt-3 text-base font-bold text-orange-500">
+       人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
+    </h4>
         <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: true }} >
           {items.map(it => (
             <motion.article 
