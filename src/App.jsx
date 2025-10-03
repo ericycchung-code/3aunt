@@ -180,7 +180,7 @@ const Menu = () => {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
-        <h4 className="mt-3 text-base font-bold text-orange-500">
+        <h4 className="mt-3 text-base font-bold text-orange-500 whitespace-nowrap">
     人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
 </h4>
 
