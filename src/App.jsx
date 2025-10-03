@@ -168,10 +168,10 @@ const Menu = () => {
     { id: 'm4', name: '塔香三杯雞便當', desc: '濃郁層次，滑嫩多汁', price: '100up', img: '/p4.jpg' },
     { id: 'm5', name: '檸香烤雞腿便當', desc: '檸香清爽，肉質鮮嫩', price: '100up', img: '/p5-1.jpg' },
     { id: 'm6', name: '香煎虱目魚便當', desc: '海風氣息，酥香撲鼻', price: '150up', img: '/p6.jpg' },
-    { id: 'm7', name: '私房特餐', desc: '隱藏美味，每日新鮮', price: '100up', img: ['/p7.jpg', '店徽.jpg'] },
+    { id: 'm7', name: '私房特餐', desc: '隱藏美味，每日新鮮', price: '100up', img: ['/p7.jpg', 'p7-1.jpg'] },
     { id: 'm8', name: '經濟特餐', desc: '香辣迷人，樸實飽滿', price: '60up', img: '/p8.jpg' },
     { id: 'm9', name: '素食便當', desc: '清新香氣，層次分明', price: '90up', img: '/p9.jpg' },
-    { id: 'm10', name: '菜盒', desc: '色香俱佳，清爽怡人', price: '100up', img: '/p10.jpg' },
+    { id: 'm10', name: '菜盒', desc: '色香俱佳，清爽怡人', price: '100up', img: ['/p10.jpg', 'p10-1.jpg'] },
   ];
 
 
@@ -180,6 +180,10 @@ const Menu = () => {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <h3 className="text-2xl font-semibold">當日精選菜單</h3>
         <p className="mt-2 text-sm text-zinc-600">菜色每日可能略有調整，歡迎來電查詢當日供應。</p>
+        <h4 className="mt-3 text-base font-bold text-orange-500">
+    人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
+</h4>
+
         <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: true }} >
           {items.map(it => (
             <motion.article 
