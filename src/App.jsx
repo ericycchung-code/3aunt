@@ -184,7 +184,7 @@ const Menu = () => {
         <br/>
        菜色每日可能略有調整，詳情歡迎來電洽詢。
       </p>
-      <h4 className="mt-3 text-base font-bold text-orange-500">
+      <h4 className="mt-3 text-base font-bold text-orange-500 whitespace-nowrap" >
        人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
     </h4>
         <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: true }} >
