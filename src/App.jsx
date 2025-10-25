@@ -30,20 +30,24 @@ const Nav = () => (
     <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
        <div className="flex items-center gap-3">
         <div className="text-4xl font-semibold text-emerald-700" >
-        <motion.img 
-        initial={{opacity:0,x:-150,rotate:-360}}
+        <motion.img 
+        initial={{opacity:0,x:-150,rotate:-360}}
         animate={{opacity:1,x:0,rotate:0}}
         transition={{duration:1,delay:0.2}}
         src={"店徽2.jpg"} 
         alt="我的店徽" 
-        className="h-12 md:h-15 lg:h-18 w-auto rounded-full object-cover"   /></div>
-        <div className="text-xl md:text-3xl  lg:text-5xl font-semibold text-emerald-700">三姑姑健康屋</div>
-        <div className="text-sm md:text-xl  lg:text-3xl text-emerald-700">3 Aunt Health House</div>
+        className="h-12 md:h-18 lg:h-20 w-auto rounded-full object-cover"   /></div>
+        {/* 關鍵修改 1：增加中文標題的字體大小 */}
+        <div className="text-2xl md:text-4xl lg:text-5xl font-semibold text-emerald-700">三姑姑健康屋</div>
+        {/* 關鍵修改 2：增加英文標題的字體大小 */}
+        <div className="text-base md:text-xl lg:text-3xl text-emerald-700">3 Aunt Health House</div>
        </div>   
-       <nav className="flex items-center gap-3 text-sm">
-         <a href="#about" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">關於</a>
-         <a href="#menu" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">菜單</a>
-         <a href="#visit" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">到店</a>
+       {/* 關鍵修改 3：將 nav 容器的字體大小基礎調大，並增加連結的 padding */}
+       <nav className="flex items-center gap-4 text-base"> 
+         {/* 關鍵修改 4：增加連結的 px 和 py 讓點擊範圍更大 */}
+         <a href="#about" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">關於</a>
+         <a href="#menu" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">菜單</a>
+         <a href="#visit" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">到店</a>
        </nav>
     </div>
    </header>
@@ -158,7 +162,6 @@ const About = () => (
     </div>
   </Section>
 );
-
 // --- 菜單元件 (Menu) ---
 const Menu = () => {
   const items = [
@@ -178,39 +181,39 @@ const Menu = () => {
   return (
     <Section id="menu" className="py-12 md:py-16 scroll-mt-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-      <h3 className="text-2xl font-semibold">當日精選菜單</h3>
-      <p class="mt-2 text-sm text-zinc-600">
-        主食：<span class="font-semibold">白飯 / 糙米飯（可選）</span>
-        <br/>
-       菜色每日可能略有調整，詳情歡迎來電洽詢。
-      </p>
-      <h4 className="mt-3 text-base font-bold text-orange-500 whitespace-nowrap" >
-       人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
-    </h4>
+      <h3 className="text-2xl font-semibold">當日精選菜單</h3>
+      <p class="mt-2 text-sm text-zinc-600">
+        主食：<span class="font-semibold">白飯 / 糙米飯（可選）</span>
+        <br/>
+       菜色每日可能略有調整，詳情歡迎來電洽詢。
+      </p>
+      <h4 className="mt-3 text-base font-bold text-orange-500 whitespace-nowrap" >
+       人氣推薦：+ $10 升級大盒便當，享受更豐富菜色！
+    </h4>
         <motion.div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={listContainer} initial="hidden" whileInView="show" viewport={{ once: true }} >
           {items.map(it => (
             <motion.article 
-             key={it.id} 
-             // 基礎陰影和樣式保留
-            className="bg-white rounded-2xl overflow-hidden shadow transition cursor-pointer" 
-            variants={cardVariants} 
-            // 螢幕大時：滑鼠懸停放大
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} // shadow-lg 效果
-            // 螢幕小時/觸控裝置：點擊時略微縮小，模擬「按下」的感覺
-             whileTap={{ scale: 0.98, boxShadow: "0 15px 25px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0px rgba(0, 0, 0, 0.15)0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)" }} // 輕微 shadow 效果
-            transition={{ duration: 0.2 }}
-            >
+             key={it.id} 
+             // 基礎陰影和樣式保留
+            className="bg-white rounded-2xl overflow-hidden shadow transition cursor-pointer" 
+            variants={cardVariants} 
+            // 螢幕大時：滑鼠懸停放大
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }} // shadow-lg 效果
+            // 螢幕小時/觸控裝置：點擊時略微縮小，模擬「按下」的感覺
+             whileTap={{ scale: 0.98, boxShadow: "0 15px 25px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0px rgba(0, 0, 0, 0.15)0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)" }} // 輕微 shadow 效果
+            transition={{ duration: 0.2 }}
+            >
               <div className="h-60 overflow-hidden">
-             {/* *** 關鍵修正：新增靜態 div 隔離層 *** */}
-                <div className="w-full h-full"> 
-                  {Array.isArray(it.img) ? (
-                    // 輪播元件： ImageCarousel 負責自己的動畫
-                    <ImageCarousel images={it.img} altText={it.name} />
-                  ) : (
-                    // 單一圖片： 使用靜態 img 標籤（因為父層 motion.article 會處理縮放動畫）
-                    <img src={it.img} alt={it.name} className="w-full h-full object-cover" loading="lazy" /> 
-                  )}
-                </div>
+             {/* *** 關鍵修正：新增靜態 div 隔離層 *** */}
+                <div className="w-full h-full"> 
+                  {Array.isArray(it.img) ? (
+                    // 輪播元件： ImageCarousel 負責自己的動畫
+                    <ImageCarousel images={it.img} altText={it.name} />
+                  ) : (
+                    // 單一圖片： 使用靜態 img 標籤（因為父層 motion.article 會處理縮放動畫）
+                    <img src={it.img} alt={it.name} className="w-full h-full object-cover" loading="lazy" /> 
+                  )}
+                </div>
               </div>
               <div className="p-4">
                 <div className="font-medium">{it.name}</div>
@@ -282,45 +285,56 @@ const LocationInfo = () => (
   </div>
 );
 
-export const Visit = () => (
-  <Section 
-    id="visit" 
-    className="py-16 md:py-24 bg-white/80 scroll-mt-32"
-  >
-  
-    <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
-      
-      {/* 左側文字區 */}
-      <motion.div 
-        className="space-y-4 bg-white/80 rounded-3xl p-6 md:p-10 max-w-2xl shadow-xl mx-auto backdrop-blur-sm "  
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0,transition: {  type:"spring",stiffness:120, duration: 1.8,   delay: 0.3  }}}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <Pill>到店自取</Pill>
-        <h3 className="text-xl md:text-3xl font-semibold text-zinc-900">
-          太保市 · 三姑姑健康屋
-        </h3>
-        <p className="text-zinc-700/90">
-          大量訂購於尖峰時段建議先來電預留。
-        </p>
-        <LocationInfo />
-      </motion.div>
+export const Visit = () => {
+  // Google Maps 嵌入式地圖 URL (保持不變)
+  const mapSrc = "https://maps.google.com/maps?q=嘉義縣太保市祥和一路東段70號(三姑姑健康屋)&t=&z=17&ie=UTF8&iwloc=B&output=embed";
 
-      {/* 右側圖片 */}
-      <div 
-        className="overflow-hidden rounded-3xl border border-amber-100 bg-white shadow-md mx-auto max-w-2xl" 
-                viewport={{ once: false, amount: 0.3 }}
-      >
-        <img 
-          src="地址.jpg" 
-          alt="地址" 
-          className="h-80 w-full object-cover" 
-        />
+  return (
+    <Section 
+      id="visit" 
+      className="py-16 md:py-24 bg-white/80 scroll-mt-32"
+    >
+    
+      {/* 關鍵修改 1: 將網格從 md:grid-cols-2 改為 md:grid-cols-3，實現不對稱分欄 */}
+      <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2 items-center px-6 md:px-10 lg:px-16">
+        
+        {/* 左側文字區 (佔用 1 欄: col-span-1) */}
+        <motion.div 
+          className="space-y-4 bg-white/80 rounded-3xl p-6 md:p-10 max-w-2xl shadow-xl mx-auto backdrop-blur-sm md:col-span-1"  
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0,transition: {  type:"spring",stiffness:120, duration: 1.8,   delay: 0.3  }}}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Pill>到店自取</Pill>
+          <h3 className="text-xl md:text-3xl font-semibold text-zinc-900">
+            太保市 · 三姑姑健康屋
+          </h3>
+          <p className="text-zinc-700/90">
+            大量訂購於尖峰時段建議先來電預留。
+          </p>
+          <LocationInfo />
+        </motion.div>
+
+        {/* 右側 Google Maps 地圖 (佔用 2 欄: col-span-2) */}
+        <div 
+          className="overflow-hidden rounded-3xl border border-amber-100 bg-white shadow-xl w-full md:col-span-1" // 關鍵修改 2: 佔用 2/3 寬度
+                  viewport={{ once: false, amount: 0.3 }}
+        >
+          <iframe
+            title="三姑姑健康屋 Google 地圖"
+            src={mapSrc}
+            width="100%" 
+            height="380" // 關鍵修改 3: 增加地圖高度
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export const Visit1 = () => (
   <Section 
@@ -405,7 +419,7 @@ export default function ThreeGuguBento() {
        <About />
       <Menu />
       <Seasonal />
-      <Visit />
+      <Visit /> 
       <Visit1 />
        </main>
        <Footer />
