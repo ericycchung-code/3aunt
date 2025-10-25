@@ -26,30 +26,27 @@ const Button = ({ variant = 'primary', className = '', children, ...rest }) => {
 };
 
 const Nav = () => (
-   <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
-    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
-       <div className="flex items-center gap-3">
-        <div className="text-4xl font-semibold text-emerald-700" >
-        <motion.img 
-        initial={{opacity:0,x:-150,rotate:-360}}
-        animate={{opacity:1,x:0,rotate:0}}
-        transition={{duration:1,delay:0.2}}
-        src={"店徽2.jpg"} 
-        alt="我的店徽" 
-        className="h-12 md:h-18 lg:h-20 w-auto rounded-full object-cover"   /></div>
-        {/* 關鍵修改 1：增加中文標題的字體大小 */}
-        <div className="text-2xl md:text-4xl lg:text-5xl font-semibold text-emerald-700">三姑姑健康屋</div>
-        {/* 關鍵修改 2：增加英文標題的字體大小 */}
-        <div className="text-base md:text-xl lg:text-3xl text-emerald-700">3 Aunt Health House</div>
-       </div>   
-       {/* 關鍵修改 3：將 nav 容器的字體大小基礎調大，並增加連結的 padding */}
-       <nav className="flex items-center gap-4 text-base"> 
-         {/* 關鍵修改 4：增加連結的 px 和 py 讓點擊範圍更大 */}
-         <a href="#about" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">關於</a>
-         <a href="#menu" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">菜單</a>
-         <a href="#visit" className="text-sm md:text-base bg-[#81D8D0] text-white px-3 py-2 rounded-lg hover:bg-[#6cbfb8]">到店</a>
-       </nav>
-    </div>
+
+   <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-amber-50">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
+       <div className="flex items-center gap-3">
+        <div className="text-4xl font-semibold text-emerald-700" >
+        <motion.img
+        initial={{opacity:0,x:-150,rotate:-360}}
+        animate={{opacity:1,x:0,rotate:0}}
+        transition={{duration:1,delay:0.2}}
+        src={"店徽2.jpg"}
+        alt="我的店徽"
+        className="h-12 md:h-15 lg:h-18 w-auto rounded-full object-cover"   /></div>
+        <div className="text-xl md:text-3xl  lg:text-5xl font-semibold text-emerald-700">三姑姑健康屋</div>
+        <div className="text-sm md:text-xl  lg:text-3xl text-emerald-700">3 Aunt Health House</div>
+       </div>  
+       <nav className="flex items-center gap-3 text-sm">
+         <a href="#about" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">關於</a>
+         <a href="#menu" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">菜單</a>
+         <a href="#visit" className="text-xs md:text-sm bg-[#81D8D0] text-white px-2 py-1 rounded hover:bg-[#6cbfb8]">到店</a>
+       </nav>
+    </div>
    </header>
 );
 
