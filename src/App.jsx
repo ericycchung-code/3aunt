@@ -248,7 +248,7 @@ const Seasonal = () => (
         </div>
         </motion.div>
         <motion.div className="rounded-2xl overflow-hidden shadow-md " initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 ,transition: {  duration: 1.2,   delay: 0.2  }}} viewport={{ once: false }}>
-         <img src="/ppp.jpg" alt="seasonal" className="w-full h-66 object-cover" />
+         <img src="/ppp1.jpg" alt="seasonal" className="w-full h-66 object-cover" />
          </motion.div>
       </div>
     </div>
