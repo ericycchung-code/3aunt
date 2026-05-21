@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { motion , AnimatePresence} from 'framer-motion';
 import { MapPin, Clock,  Phone, Mail, ShoppingCart } from 'lucide-react';
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // --- 輔助元件 ---
 
@@ -421,6 +422,7 @@ export default function ThreeGuguBento() {
       <Visit1 />
        </main>
        <Footer />
+       <SpeedInsights />
        </div>
        );
 }
